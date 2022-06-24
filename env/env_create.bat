@@ -22,6 +22,7 @@ pip install %selected_path%\torch-1.9.0+cu111-cp39-cp39-win_amd64.whl
 pip install %selected_path%\torchvision-0.10.0+cu111-cp39-cp39-win_amd64.whl
 pip install torchaudio
 call conda deactivate
+echo 完成
 pause&exit /b
 
 <script>
