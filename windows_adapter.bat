@@ -24,8 +24,8 @@ del /q env\ED-setup.bat.bak
 
 move helper_script\run.bat helper_script\run.bat.bak
 type helper_script\run.bat.bak | find /v "" > helper_script\run.bat
-del /q helper_script\run.bat
+del /q helper_script\run.bat.bak
 
 move helper_script\ESRGAN_run.bat helper_script\ESRGAN_run.bat.bak
 type helper_script\ESRGAN_run.bat.bak | find /v "" > helper_script\ESRGAN_run.bat
-del /q helper_script\ESRGAN_run.bat
+del /q helper_script\ESRGAN_run.bat.bak
