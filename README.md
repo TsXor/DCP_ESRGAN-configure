@@ -7,6 +7,8 @@
 
 安装步骤：
 1. 安装anaconda  
-访问https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/?C=M&O=D ，找到格式类似：Anaconda3-xxxx-Windows-x86_64.exe且日期最新的下载并安装
+访问https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/?C=M&O=D ，找到格式类似：Anaconda3-xxxx-Windows-x86_64.exe且日期最新的文件，下载并安装。
 2. 下载本仓库  
 以zip形式下载本仓库，你应该知道该怎么做。
+3. （重要）解压  
+你可能觉得这不太重要，但你必须把zip文件完全解压才能进行下面的操作！
