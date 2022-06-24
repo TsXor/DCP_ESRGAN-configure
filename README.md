@@ -7,7 +7,9 @@
 本项目并不会提供30系卡的支持，因为我没有
 ## 存储空间要求
 约10G（没啥存不下的，存不下请花100买块ssd）
-
+## 注意
+“安装步骤”中，除了第二步可能用到代理，在进行其他步骤时**请关闭代理！**  
+在以zip形式下载本仓库后，您可以用markdown编辑器来阅读此README。
 ## 安装步骤：
 ### 1. 安装anaconda  
 访问https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/?C=M&O=D ，找到格式类似：Anaconda3-xxxx-Windows-x86_64.exe且日期最新的文件，下载并安装。
