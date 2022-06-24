@@ -29,6 +29,7 @@ nircmdc shortcut %selected_path%\DeepCreamPy\DeepCreamPy-main\models %selected_p
 nircmdc shortcut %selected_path%\io ~$folder.desktop$ ED_输入输出
 
 echo %selected_path% >> selected_path_for_ED
+echo 完成
 
 pause&exit /b
 
