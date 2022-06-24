@@ -26,7 +26,7 @@
 下载这2个文件：  
 models_ESRGAN.7z：https://www.123pan.com/s/3J4rVv-blMnh 提取码:cRi1  
 models_DCP.7z：https://www.123pan.com/s/3J4rVv-ZlMnh 提取码:isDE  
-将这2个文件放入`env`文件夹中，双击运行`extract_models.bat`。
+将这2个文件放入`env`文件夹中，双击运行`env`目录中的`extract_models.bat`。
 ### 8. Enjoy!
 运行“DeepCreamPy”会过几秒才弹出窗口，这是正常的，因为激活环境需要时间。  
 打开“ED_输入输出”，你会看到6个文件夹。其中4个是ESRGAN和DeepCreamPy的输入和输出文件夹。他俩都需要你把文件放到一个预先规定好的输入文件夹中，然后等到处理完，你就可以从输出文件夹中取出结果。另外2个是模型文件夹，你可以向其中添加自己喜欢的模型。  
