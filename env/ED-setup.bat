@@ -24,6 +24,8 @@ nircmdc shortcut %selected_path%\ESRGAN\input %selected_path%\io ESRGAN_输入
 nircmdc shortcut %selected_path%\ESRGAN\output %selected_path%\io ESRGAN_输出
 nircmdc shortcut %selected_path%\DeepCreamPy\DeepCreamPy-main\decensor_input %selected_path%\io DeepCreamPy_输入
 nircmdc shortcut %selected_path%\DeepCreamPy\DeepCreamPy-main\decensor_output %selected_path%\io DeepCreamPy_输出
+nircmdc shortcut %selected_path%\ESRGAN\models %selected_path%\io ESRGAN_models
+nircmdc shortcut %selected_path%\DeepCreamPy\DeepCreamPy-main\models %selected_path%\io DeepCreamPy_models
 nircmdc shortcut %selected_path%\io ~$folder.desktop$ ED_输入输出
 
 echo %selected_path% >> selected_path_for_ED
