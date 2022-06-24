@@ -62,6 +62,8 @@ customize_model_usage = ""
 if customize_model_usage.strip()=='':
   if len(models) == 0:
     print('models文件夹中没有模型，请放几个进去')
+    input()
+    exit()
   else:
     for i in range(len(models)):
       file = '%s\%s' % (model_dir,models[i])
@@ -77,7 +79,7 @@ if customize_model_usage.strip()=='':
 else:
   model_pth = customize_model_usage
 
-upscale_exec = os.path.split(sys.argv[0])[0]+'\\ESRGAN\\upscale.py'
+upscale_exec = os.path.split(sys.argv[0])[0]+'\\ESRGAN-master\\upscale.py'
 tmp_bat = os.path.split(sys.argv[0])[0]+'\\tmp.bat'
 cmd_str = 'python %s --input %s --output %s%s%s --seamless %s%s%s%s%s%s --alpha-threshold %s --alpha-boundary-offset %s --alpha-mode %s%s %s' % (upscale_exec, input_folder, output_folder, skip_existing_output_files, delete_input_files_after_process, seamless, use_CPU_instead_of_CUDA, floating_point_16, cache_max_split_depth, binary_alpha, ternary_alpha, alpha_threshold, alpha_boundary_offset, alpha_mode, verbose, model_pth)
 with open(tmp_bat,'w+') as cmd_file:
