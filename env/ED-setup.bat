@@ -26,6 +26,8 @@ nircmdc shortcut %selected_path%\DeepCreamPy\DeepCreamPy-main\decensor_input %se
 nircmdc shortcut %selected_path%\DeepCreamPy\DeepCreamPy-main\decensor_output %selected_path%\io DeepCreamPy_输出
 nircmdc shortcut %selected_path%\io ~$folder.desktop$ ED_输入输出
 
+echo %selected_path% >> selected_path_for_ED
+
 pause&exit /b
 
 <script>
