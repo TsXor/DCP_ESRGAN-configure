@@ -14,103 +14,18 @@ move %selected_path%\ESRGAN_run.py %selected_path%\ESRGAN
 move %selected_path%\run.config %selected_path%\ESRGAN
 move %selected_path%\run.bat %selected_path%\DeepCreamPy
 mkdir %selected_path%\ESRGAN\models
+mkdir %selected_path%\ESRGAN\input
+mkdir %selected_path%\ESRGAN\output
 mkdir %selected_path%\io
 
-SETLOCAL ENABLEDELAYEDEXPANSION
-SET LinkName=ESRGAN
-SET Esc_LinkDest=%%HOMEDRIVE%%%%HOMEPATH%%\Desktop\!LinkName!.lnk
-SET Esc_LinkTarget=!selected_path!\ESRGAN_run.bat
-SET cSctVBS=%TMP%\CreateShortcut.vbs
-((
-  echo Set oWS = WScript.CreateObject^("WScript.Shell"^) 
-  echo sLinkFile = oWS.ExpandEnvironmentStrings^("!Esc_LinkDest!"^)
-  echo Set oLink = oWS.CreateShortcut^(sLinkFile^) 
-  echo oLink.TargetPath = oWS.ExpandEnvironmentStrings^("!Esc_LinkTarget!"^)
-  echo oLink.Save
-)1>!cSctVBS!
-cscript //nologo .\!cSctVBS!
+nircmdc shortcut %selected_path%\ESRGAN_run.bat ~$folder.desktop$ ESRGAN
+nircmdc shortcut %selected_path%\DCP_run.vbs ~$folder.desktop$ DeepCreamPy
+nircmdc shortcut %selected_path%\ESRGAN\input %selected_path%\io ESRGAN_输入
+nircmdc shortcut %selected_path%\ESRGAN\output %selected_path%\io ESRGAN_输出
+nircmdc shortcut %selected_path%\DeepCreamPy\DeepCreamPy-main\decensor_input %selected_path%\io DeepCreamPy_输入
+nircmdc shortcut %selected_path%\DeepCreamPy\DeepCreamPy-main\decensor_output %selected_path%\io DeepCreamPy_输出
+nircmdc shortcut %selected_path%\io ~$folder.desktop$ ED_输入输出
 
-SET LinkName=DeepCreamPy
-SET Esc_LinkDest=%%HOMEDRIVE%%%%HOMEPATH%%\Desktop\!LinkName!.lnk
-SET Esc_LinkTarget=!selected_path!\DCP_run.vbs
-SET cSctVBS=%TMP%\CreateShortcut.vbs
-((
-  echo Set oWS = WScript.CreateObject^("WScript.Shell"^) 
-  echo sLinkFile = oWS.ExpandEnvironmentStrings^("!Esc_LinkDest!"^)
-  echo Set oLink = oWS.CreateShortcut^(sLinkFile^) 
-  echo oLink.TargetPath = oWS.ExpandEnvironmentStrings^("!Esc_LinkTarget!"^)
-  echo oLink.Save
-)1>!cSctVBS!
-cscript //nologo .\!cSctVBS!
-
-SETLOCAL ENABLEDELAYEDEXPANSION
-SET LinkName=ESRGAN_输入
-SET Esc_LinkDest=!selected_path!\io\!LinkName!.lnk
-SET Esc_LinkTarget=!selected_path!\ESRGAN\input
-SET cSctVBS=%TMP%\CreateShortcut.vbs
-((
-  echo Set oWS = WScript.CreateObject^("WScript.Shell"^) 
-  echo sLinkFile = oWS.ExpandEnvironmentStrings^("!Esc_LinkDest!"^)
-  echo Set oLink = oWS.CreateShortcut^(sLinkFile^) 
-  echo oLink.TargetPath = oWS.ExpandEnvironmentStrings^("!Esc_LinkTarget!"^)
-  echo oLink.Save
-)1>!cSctVBS!
-cscript //nologo .\!cSctVBS!
-
-SET LinkName=ESRGAN_输出
-SET Esc_LinkDest=!selected_path!\io\!LinkName!.lnk
-SET Esc_LinkTarget=!selected_path!\ESRGAN\output
-SET cSctVBS=%TMP%\CreateShortcut.vbs
-((
-  echo Set oWS = WScript.CreateObject^("WScript.Shell"^) 
-  echo sLinkFile = oWS.ExpandEnvironmentStrings^("!Esc_LinkDest!"^)
-  echo Set oLink = oWS.CreateShortcut^(sLinkFile^) 
-  echo oLink.TargetPath = oWS.ExpandEnvironmentStrings^("!Esc_LinkTarget!"^)
-  echo oLink.Save
-)1>!cSctVBS!
-cscript //nologo .\!cSctVBS!
-
-SET LinkName=DeepCreamPy_输入
-SET Esc_LinkDest=!selected_path!\io\!LinkName!.lnk
-SET Esc_LinkTarget=!selected_path!\DeepCreamPy\DeepCreamPy-main\decensor_input
-SET cSctVBS=%TMP%\CreateShortcut.vbs
-((
-  echo Set oWS = WScript.CreateObject^("WScript.Shell"^) 
-  echo sLinkFile = oWS.ExpandEnvironmentStrings^("!Esc_LinkDest!"^)
-  echo Set oLink = oWS.CreateShortcut^(sLinkFile^) 
-  echo oLink.TargetPath = oWS.ExpandEnvironmentStrings^("!Esc_LinkTarget!"^)
-  echo oLink.Save
-)1>!cSctVBS!
-cscript //nologo .\!cSctVBS!
-
-SET LinkName=DeepCreamPy_输出
-SET Esc_LinkDest=!selected_path!\io\!LinkName!.lnk
-SET Esc_LinkTarget=!selected_path!\DeepCreamPy\DeepCreamPy-main\decensor_output
-SET cSctVBS=%TMP%\CreateShortcut.vbs
-((
-  echo Set oWS = WScript.CreateObject^("WScript.Shell"^) 
-  echo sLinkFile = oWS.ExpandEnvironmentStrings^("!Esc_LinkDest!"^)
-  echo Set oLink = oWS.CreateShortcut^(sLinkFile^) 
-  echo oLink.TargetPath = oWS.ExpandEnvironmentStrings^("!Esc_LinkTarget!"^)
-  echo oLink.Save
-)1>!cSctVBS!
-cscript //nologo .\!cSctVBS!
-
-SET LinkName=ED_输入输出
-SET Esc_LinkDest=%%HOMEDRIVE%%%%HOMEPATH%%\Desktop\!LinkName!.lnk
-SET Esc_LinkTarget=!selected_path!\io\
-SET cSctVBS=%TMP%\CreateShortcut.vbs
-((
-  echo Set oWS = WScript.CreateObject^("WScript.Shell"^) 
-  echo sLinkFile = oWS.ExpandEnvironmentStrings^("!Esc_LinkDest!"^)
-  echo Set oLink = oWS.CreateShortcut^(sLinkFile^) 
-  echo oLink.TargetPath = oWS.ExpandEnvironmentStrings^("!Esc_LinkTarget!"^)
-  echo oLink.Save
-)1>!cSctVBS!
-cscript //nologo .\!cSctVBS!
-
-DEL !cSctVBS! /f /q
-)1>>NUL 2>>&1
 pause&exit /b
 
 <script>
