@@ -1,3 +1,5 @@
+@echo off
+chcp 65001 && cls
 cd %~dp0
 move helper_script\DCP_run.vbs helper_script\DCP_run.vbs.bak
 PowerShell -Command "& {get-content helper_script\DCP_run.vbs.bak -encoding utf8 | set-content helper_script\DCP_run.vbs -encoding default}"
