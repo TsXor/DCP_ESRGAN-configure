@@ -18,6 +18,14 @@ move env\ED-setup.bat env\ED-setup.bat.bak
 type env\ED-setup.bat.bak | find /v "" > env\ED-setup.bat
 del /q env\ED-setup.bat.bak
 
+move env\extract_models.bat env\extract_models.bat.bak
+PowerShell -Command "& {get-content env\extract_models.bat.bak -encoding utf8 | set-content env\extract_models.bat -encoding default}"
+del /q env\extract_models.bat.bak
+
+move env\extract_models.bat env\extract_models.bat.bak
+type env\extract_models.bat.bak | find /v "" > env\extract_models.bat
+del /q env\extract_models.bat.bak
+
 move env\ED-setup.bat env\ED-setup.bat.bak
 PowerShell -Command "& {get-content env\ED-setup.bat.bak -encoding utf8 | set-content env\ED-setup.bat -encoding default}"
 del /q env\ED-setup.bat.bak
