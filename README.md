@@ -1,5 +1,4 @@
 # DCP_ESRGAN-configure
-## *施工中*
 此仓库的目的是尽可能的简化配置ESRGAN与DeepCreamPy（GPU运行）的步骤  
 ## 硬件要求
 7系-20系的N卡，不包括gt1030和gt730（这种没门级您在想啥呢？？？）  
