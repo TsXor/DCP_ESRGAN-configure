@@ -3,7 +3,7 @@
 ## 硬件要求
 7系-20系的N卡，不包括gt1030和gt730（这种没门级您在想啥呢？？？）  
 30系的N卡安装完后会跑不起来DeepCreamPy，原因是CUDA10.0并不支持30系，需要换用支持cuda11.x的专用版本的tensorflow v1：https://github.com/nvidia/tensorflow  
-你可以尝试从这里下载whl并安装：https://github.com/fo40225/tensorflow-windows-wheel/tree/master/1.15.4+nv20.12/
+你可以尝试从这里下载whl并安装：https://github.com/fo40225/tensorflow-windows-wheel/tree/master/1.15.4+nv20.12/  
 本项目并不会提供30系卡的支持，因为我没有
 ## 存储空间要求
 约10G（没啥存不下的，存不下请花100买块ssd）
