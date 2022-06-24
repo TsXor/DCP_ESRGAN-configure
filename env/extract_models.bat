@@ -7,5 +7,6 @@ if not exist selected_path_for_ED (
 set /p selected_path=<selected_path_for_ED
 7za x models_ESRGAN.7z -r -o%selected_path%\ESRGAN
 7za x models_DCP.7z -r -o%selected_path%\DeepCreamPy\DeepCreamPy-main
+echo 完成
 :END
 pause&exit /b
